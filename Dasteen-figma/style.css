@@ -12,14 +12,13 @@
     width: 1440px;
     padding: 0 95px;
     margin: 0 auto;
-    /*background: var(--White, #FFFFFE);*/
 }
 
 .grid{
     background: var(--White, #FFFFFE);
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 86px 814px 500px 2440px 453px 435px;
+    grid-template-rows: 86px 814px 500px 2504px 453px 435px;
     grid-template-areas:
             "header"
             "welcome-subscribe"
@@ -45,7 +44,6 @@ header{
 
 .logo{
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 .logo>p{
@@ -177,11 +175,15 @@ nav>ul>li{
     flex-direction: column;
     gap: 50px;
 }
+
 .section-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 35px;
+}
+.browse-head{
     margin-top: 67px;
 }
 .section-name{
@@ -254,15 +256,220 @@ nav>ul>li{
     background: var(--White, #FFFFFE);
     border-radius: 8px;
 }
-
+/*-------------------------------------- main ---------------------------------------*/
 main{
     grid-area: main;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
 }
+.override{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.articles-section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.top-articles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.article-card{
+    display: flex;
+    width: 260px;
+    height: 385px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: content-box;
+    transition: 0.5s;
+}
+.article-card:hover{
+    box-shadow: 4px 6px 13px 0 rgba(215, 215, 215, 0.25);
+    transition: 0.5s;
+}
+.article-card>h4{
+    margin-top: 25px;
+    color: var(--Black, #2B2C34);
+    /* 20 px - Sub Heading 2 */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.article-info{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    margin-top: auto;
+}
+.article-info>div{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.article-info>div>p:first-of-type{
+    color: var(--Black, #2B2C34);
+    /* 16 px - Paragraph 3 Semi bold */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.article-info>div>p:last-of-type{
+    color: var(--Black, #2B2C34);
+    /* 14 px - Paragraph 4 */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    white-space: break-spaces;
+}
+
+main>button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 23px 19px 23px;
+    border-radius: 8px;
+    background: var(--Blue, #6246EA);
+    width: 165px;
+    height: 64px;
+    align-self: center;
+}
+main>button>a{
+    color: var(--White, #FFFFFE);
+    /* 20 px - Sub Heading 2 */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    text-wrap: nowrap;
+}
+/*------------------------------------ section-newsletter --------------------------------------*/
 .newsletter{
     grid-area: newsletter;
     background: var(--Light-Grey-1, #EFF0F3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.newsletter>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.newsletter>div>h2{
+    color: var(--Black, #2B2C34);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.newsletter>div>p{
+    color: var(--Grey, #C0C0C0);
+    text-align: center;
+    /* 20 px - Paragraph 1 */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+/*------------------------------------- footer ------------------------------------*/
 footer{
     grid-area: footer;
     background: var(--Light-Grey-2, #E4E5E9);
+    width: 100%;
+}
+
+.nav-contacts{
+    display: flex;
+    gap: 160px;
+    margin-top: 70px;
+}
+.contacts{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+.contacts>p{
+    color: var(--Black, #2B2C34);
+    /* 18 px - Paragraph 2 */
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.icon-links{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+.icon-links>div{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-info{
+    display: flex;
+    align-items: flex-start;
+    gap: 95px;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.list>h4{
+    color: var(--Black, #2B2C34);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.list>ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.list>ul>li{
+    color: var(--Black, #2B2C34);
+    /* 18 px - Paragraph 2 */
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+footer>hr{
+    margin-top: 50px;
+    margin-bottom: 26px;
+}
+footer>p{
+    color: var(--Black, #2B2C34);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
